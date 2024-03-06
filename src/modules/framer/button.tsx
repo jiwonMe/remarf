@@ -7,3 +7,21 @@ const Button = () => {
 }
 
 export default Button
+
+export const __FramerMetadata__ = {
+  exports: {
+    default: {
+      type: "reactComponent",
+      name: "Sample",
+      slots: [],
+      annotations: {
+        framerSupportedLayoutHeight: "auto",
+        framerSupportedLayoutWidth: "auto",
+        framerContractVersion: "1"
+      }
+    },
+    __FramerMetadata__: {
+      type: "variable"
+    }
+  }
+};
