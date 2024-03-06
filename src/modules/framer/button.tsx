@@ -1,12 +1,32 @@
 import React from 'react'
+import styled from 'styled-components'
 
-const Button = () => {
+interface ButtonProps {
+  children: string
+}
+
+const Button = (props: ButtonProps) => {
   return (
-    <button>Click me</button>
+    <ButtonLayout>
+      {props.children}
+    </ButtonLayout>
   )
 }
 
 export default Button
+
+const ButtonLayout = styled.button`
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+`
 
 export const __FramerMetadata__ = {
   exports: {
