@@ -11,7 +11,7 @@
     "jsx": "react-jsx",
     "incremental": true,
     "outDir": "public/m",
-    "rootDir": "src",
+    "rootDir": "src/modules",
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
