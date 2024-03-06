@@ -2,16 +2,30 @@ const nextConfig = {
   async headers() {
     return [
       {
-        // 모듈 경로에 대한 MIME 타입 설정
-        source: '/m/:path*',
+        // Set MIME type for module path
+        source: '/m/framer/button.js',
         headers: [
           {
             key: 'Content-Type',
-            value: 'application/javascript',
+            value: 'text/javascript',
           },
         ],
       },
-      // 다른 경로에 대한 설정이 필요하다면 여기에 추가
+      // Add more configurations for other paths here
+    ];
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/m/:path*',
+        destination: '/m/:path*',
+        has: [
+          {
+            type: 'host',
+            value: '(?!remarf.com).+',
+          },
+        ],
+      },
     ];
   },
 };
